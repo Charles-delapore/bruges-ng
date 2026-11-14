@@ -95,9 +95,8 @@ off a figure in Smith et al. 2003 (the test file itself says
 
 ### Verification (2026-11-14)
 
-- Environment: shared VM, Python 3.12.3; system NumPy 1.26.4 /
-  SciPy 1.11.4, plus a venv with NumPy 2.5.4 / SciPy 1.18.1 /
-  matplotlib (`~/workspace/your_files/geography-research/github-plan/venvs/bruges-numpy2/`).
+- Environment: Python 3.12.3; system NumPy 1.26.4 / SciPy 1.11.4,
+  plus a clean venv with NumPy 2.5.4 / SciPy 1.18.1 / matplotlib.
 - Baseline (upstream `905fe4f`, NumPy 1.26.4): **56 tests,
   35 pass / 2 fail / 19 errors**. Error breakdown: 7×
   `assertAlmostEquals`, 7× `np.float`, 3× `np.asscalar`,
