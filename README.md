@@ -1,7 +1,7 @@
 # bruges-ng
 
 > **Fork note.** This is `bruges-ng`, a maintained fork of
-> [`agilescientific/bruges`](https://github.com/Charles-delapore/bruges-ng)
+> [`agilescientific/bruges`](https://github.com/agilescientific/bruges)
 > v0.5.4 (upstream inactive since 2023-12-19). The import name stays
 > `bruges`; only the distribution name changed (`bruges` on PyPI is
 > taken by the unmaintained 0.5.4). License stays **Apache-2.0**; the
