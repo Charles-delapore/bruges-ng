@@ -9,7 +9,6 @@ from collections import namedtuple
 
 import numpy as np
 import scipy.signal
-import matplotlib.pyplot as plt
 from bruges.util import deprecated
 
 
