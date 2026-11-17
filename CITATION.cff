@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use bruges-ng, please cite this repository and the original bruges project."
+title: "bruges-ng: a maintained fork of bruges"
+abstract: "A library of geophysical equations (Aki-Richards to Zoeppritz), updated for NumPy 2, Python 3.9-3.13 and modern packaging. Import name stays bruges."
+authors:
+  - family-names: "Hall"
+    given-names: "Matt"
+    alias: "kwinkunks"
+  - family-names: "tianchunzhong"
+    alias: "Charles-delapore"
+version: "0.5.5"
+date-released: "2026-11-14"
+license: "Apache-2.0"
+repository-code: "https://github.com/Charles-delapore/bruges-ng"
+url: "https://github.com/Charles-delapore/bruges-ng"
+keywords:
+  - geophysics
+  - seismology
+  - rock physics
+  - numpy
