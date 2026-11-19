@@ -142,6 +142,13 @@ off a figure in Smith et al. 2003 (the test file itself says
 
 ---
 
-## Tier 2 — Local Optimization (pending)
+## Tier 2 — Local Optimization (in progress)
+
+- **Lazy matplotlib import** (2026-11-16): the plotting helpers in
+  `bruges/filters/wavelets.py` import pyplot locally, so `import bruges` no
+  longer requires matplotlib. Regression test:
+  `bruges/filters/test/import_test.py`.
+- **NumPy 1.26 compatibility job** (2026-11-20): CI pins NumPy 1.26.4 on
+  Python 3.10 alongside the latest-NumPy matrix.
 
 ## Tier 3 — Underlying Logic & System Design (pending)
