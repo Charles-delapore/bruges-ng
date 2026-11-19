@@ -1,4 +1,4 @@
-# bruges-ng
+﻿# bruges-ng
 
 **A maintained fork of [bruges](https://github.com/agilescientific/bruges): a
 library of geophysical equations, from Aki–Richards to Zoeppritz.**
@@ -20,7 +20,7 @@ Not yet on PyPI; install from the repository:
 pip install "bruges-ng @ git+https://github.com/Charles-delapore/bruges-ng.git"
 ```
 
-Requires Python 3.9+ and NumPy 1.20+ (NumPy 2.x is supported).
+Requires Python 3.9+ and NumPy 1.20+; CI covers NumPy 1.26 and 2.x.
 
 ## Quick start
 
@@ -39,3 +39,4 @@ w, t = bg.filters.ormsby(duration=0.256, dt=0.002, f=[5, 10, 40, 80])
 - [Upstream documentation](https://code.agilescientific.com/bruges)
 - [Issue tracker](https://github.com/Charles-delapore/bruges-ng/issues)
 - [Original project](https://github.com/agilescientific/bruges)
+
