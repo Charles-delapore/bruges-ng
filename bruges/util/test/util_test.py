@@ -8,6 +8,7 @@ Testing util.
 import unittest
 import numpy as np
 from bruges.util import next_pow2, rms, top_and_tail
+from bruges.noise import noise_db
 
 
 class UtilTest(unittest.TestCase):
@@ -36,17 +37,13 @@ class UtilTest(unittest.TestCase):
         ans = 2.1602469
         self.assertAlmostEqual(ans, rms(l, axis=-1)[0, 0], places=5)
 
-    def noise_db(self):
+    def test_noise_db(self):
         a = np.ones(1000000)
-        ans10p = 3.32
-        ans0 = 1.41
-        ans10n = 1.05
-
-        self.assertAlmostEqual(ans10p, noise_db(a, 10), places=2)
-        self.assertAlmostEqual(ans0, noise_db(a, 10), places=2)
-        self.assertAlmostEqual(ans10n, noise_db(a, -10), places=2)
+        self.assertAlmostEqual(rms(noise_db(a, 10)), 10 ** (-10 / 20), delta=0.03)
+        self.assertAlmostEqual(rms(noise_db(a, 0)), 1.0, delta=0.05)
+        self.assertAlmostEqual(rms(noise_db(a, -10)), 10 ** (10 / 20), delta=0.2)
 
 if __name__ == '__main__':
 
-    suite = unittest.TestLoader().loadTestsFromTestCase(UtilityTest)
+    suite = unittest.TestLoader().loadTestsFromTestCase(UtilTest)
     unittest.TextTestRunner(verbosity=2).run(suite)
