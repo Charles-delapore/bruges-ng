@@ -9,6 +9,7 @@ petrophysics.py
 """
 
 import numpy as np
+from scipy.optimize import curve_fit
 
 
 def gardner(vp, alpha=310, beta=0.25, fps=False):
@@ -80,7 +81,7 @@ def porosity_to_density(phi, rho_matrix, rho_fluid):
     Returns:
         Estimate of bulk density, rho.
     """
-    return rho_matrix * (1 - phi) + rho_fluid * phi_rhob
+    return rho_matrix * (1 - phi) + rho_fluid * phi
 
 
 def density_to_porosity(rho, rho_matrix, rho_fluid):
@@ -140,7 +141,7 @@ def gardner_param(vp, rhob):
          alpha (float): The factor.
          beta (float): The exponent, usually 0.25.
      """
-     params, _ = curve_fit(optimizer_gardner, rhob, vp)
+     params, _ = curve_fit(optimize_inverse_gardner, rhob, vp)
      return params[0], params[1]
      
 
@@ -219,3 +220,4 @@ def archie_sw(phi, rw, rt, a=1, m=2, n=2):
     """
     
     return ((a*rw)/(rt*phi**m))**(1/n)
+
