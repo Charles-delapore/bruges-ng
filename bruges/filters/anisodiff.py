@@ -1,4 +1,4 @@
-"""
+﻿"""
 :copyright: Alistair Muldal
 :license: Unknown, shared on StackOverflow and Pastebin
 
@@ -82,7 +82,7 @@ def anisodiff(img, niter=1, kappa=50, gamma=0.1, step=(1., 1.), option=1):
     gS = np.ones_like(imgout)
     gE = gS.copy()
 
-    for ii in xrange(niter):
+    for ii in range(niter):
 
         # calculate the diffs
         deltaS[:-1, :] = np.diff(imgout, axis=0)
@@ -205,3 +205,4 @@ def anisodiff3(stack, niter=1, kappa=50, gamma=0.1, step=(1., 1., 1.), option=1)
         stackout += gamma*(UD+NS+EW)
 
     return stackout
+
