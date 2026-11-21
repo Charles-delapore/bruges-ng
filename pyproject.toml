@@ -10,3 +10,12 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
 write_to = "bruges/_version.py"
 git_describe_command = "git describe --dirty --tags --long --match v* --first-parent"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+# rpt.py is an experimental template script that relies on interactive globals.
+exclude = ["bruges/rockphysics/rpt.py"]
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
